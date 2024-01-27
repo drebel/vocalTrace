@@ -13,11 +13,11 @@
         <div id="frame">
             <h3>Analyze YouTube Video or Upload .wav File</h3>
             <input type="text" placeholder="Youtube Link" id="youtubeLink">
-            <button id="analyzeYTLink">Analyze Youtube Link</button>
+            <button id="analyzeYTLink" onclick="analyzeYouTubeLink()">Analyze Youtube Link</button>
             <br>
             <br>
             <input type="file" accept="audio/wav" id="wavFile"></input>
-            <button id="analyzeUploadedFile">Analyze .wav File</button>
+            <button id="analyzeUploadedFile" onclick="analyzeUploadedFile()">Analyze .wav File</button>
         </div>
         <div id="frame">
             <h3>Recording Console</h3>
@@ -41,35 +41,35 @@
                         <tbody>
                             <tr>
                                 <td>Celebrity:</td>
-                                <td></td>
+                                <td id="celebrity"></td>
                             </tr>
                             <tr>
                                 <td>Age:</td>
-                                <td></td>
+                                <td id="age"></td>
                             </tr>
                             <tr>
                                 <td>Gender:</td>
-                                <td></td>
+                                <td id="gender"></td>
                             </tr>
                             <tr>
                                 <td>Anger %:</td>
-                                <td></td>
+                                <td id="anger"></td>
                             </tr>
                             <tr>
                                 <td>Disgust %:</td>
-                                <td></td>
+                                <td id="disgust"></td>
                             </tr>
                             <tr>
                                 <td>Fear %:</td>
-                                <td></td>
+                                <td id="fear"></td>
                             </tr>
                             <tr>
                                 <td>Happiness %:</td>
-                                <td></td>
+                                <td id="happy"></td>
                             </tr>
                             <tr>
                                 <td>Sadness %:</td>
-                                <td></td>
+                                <td id="sad"></td>
                             </tr>
                         </tbody>
                     </table>
