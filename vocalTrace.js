@@ -3,6 +3,8 @@ const startRecordButton = document.getElementById('startRecord');
 const stopRecordButton = document.getElementById('stopRecord');
 const analyzeAudioButton = document.getElementById('analyzeAudio');
 const downloadAudioButton = document.getElementById('downloadAudio');
+const analyzeYTButton = document.getElementById('analyzeYTLink');
+const analyzeFileButton = document.getElementById('analyzeUploadedFile');
 const recordedAudio = document.getElementById('recordedAudio');
 
 startRecordButton.disabled = false;
@@ -10,9 +12,57 @@ stopRecordButton.disabled = true;
 analyzeAudioButton.disabled = true;
 downloadAudioButton.disabled = true;
 
+
+function analyzeUploadedFile() {
+    const fileInput = document.getElementById('wavFile');
+    const file = fileInput.files[0];
+
+    if (!file) {
+        console.error('No file selected');
+        return;
+    }
+
+    const formData = new FormData();
+    formData.append('audio', file);
+
+    fetch('https://api.example.com/upload-audio', {
+        method: 'POST',
+        body: formData,
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log('API response:', data);
+    })
+    .catch(error => console.error('API error:', error));
+}
+
+function analyzeYouTubeLink() {
+    const youtubeLinkInput = document.getElementById('youtubeLink');
+    const youtubeLink = youtubeLinkInput.value.trim();
+
+    if (!youtubeLink) {
+        console.error('No YouTube link provided');
+        return;
+    }
+
+    const formData = new FormData();
+    formData.append('youtubeLink', youtubeLink);
+
+    fetch('https://api.example.com/upload-youtube-link', {
+        method: 'POST',
+        body: formData,
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log('API response:', data);
+    })
+    .catch(error => console.error('API error:', error));
+}
+
+
+
 let mediaRecorder;
 let recordedChunks = [];
-
 
 startRecordButton.addEventListener('click', async () => {
     const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
@@ -57,7 +107,7 @@ analyzeAudioButton.addEventListener('click', () => {
     const formData = new FormData();
     formData.append('audio', audioBlob, 'recorded_audio.wav');
 
-    fetch('URL', {
+    fetch('http://71.197.246.219:8080/docs', {
         method: 'POST',
         body: formData,
     })

@@ -11,12 +11,21 @@
         <h1>Vocal Trace</h1>
         <h2>Instructions: Record/Upload a clip of audio and Viola!</h2>
         <div id="frame">
+            <h3>Analyze YouTube Video or Upload .wav File</h3>
+            <input type="text" placeholder="Youtube Link" id="youtubeLink">
+            <button id="analyzeYTLink">Analyze Youtube Link</button>
+            <br>
+            <br>
+            <input type="file" accept="audio/wav" id="wavFile"></input>
+            <button id="analyzeUploadedFile">Analyze .wav File</button>
+        </div>
+        <div id="frame">
             <h3>Control Console</h3>
-        <button id="startRecord">Upload Recording</button>
         <button id="startRecord">Start Recording</button>
         <button id="stopRecord">Stop Recording</button>
         <button id="analyzeAudio">Analyze Current Audio</button>
         <button id="downloadAudio">Download Audio</button>
+        <br>    
         </div>
         <div id="frame">
         <br>
