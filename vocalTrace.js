@@ -25,7 +25,7 @@ function analyzeUploadedFile() {
     const formData = new FormData();
     formData.append('audio', file);
 
-    fetch('https://api.example.com/upload-audio', {
+    fetch('http://71.197.246.219:8080/docs', {
         method: 'POST',
         body: formData,
     })
@@ -48,7 +48,7 @@ function analyzeYouTubeLink() {
     const formData = new FormData();
     formData.append('youtubeLink', youtubeLink);
 
-    fetch('https://api.example.com/upload-youtube-link', {
+    fetch('http://71.197.246.219:8080/docs', {
         method: 'POST',
         body: formData,
     })
