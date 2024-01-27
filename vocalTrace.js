@@ -46,8 +46,27 @@ stopRecordButton.addEventListener('click', () => {
 });
 
 analyzeAudioButton.addEventListener('click', () => {
-    console.log("analyzing audio sample")
-})
+    console.log('Analyzing audio')
+    // if (recordedChunks.length === 0) {
+    //     console.error('No recorded audio to analyze');
+    //     return;
+    // }
+
+    // const audioBlob = new Blob(recordedChunks, { type: 'audio/wav' });
+
+    // const formData = new FormData();
+    // formData.append('audio', audioBlob, 'recorded_audio.wav');
+
+    // fetch('URL', {
+    //     method: 'POST',
+    //     body: formData,
+    // })
+    // .then(response => response.json())
+    // .then(data => {
+    //     console.log('API response:', data);
+    // })
+    // .catch(error => console.error('API error:', error));
+});
 
 downloadAudioButton.addEventListener('click', () => {
     const blob = new Blob(recordedChunks, { type: 'audio/wav' });
