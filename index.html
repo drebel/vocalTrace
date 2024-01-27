@@ -3,26 +3,32 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Vocal Trace</title>
+        <title>VocalTrace</title>
+        <!-- Link to the CSS file -->
+        <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
         <h1>Vocal Trace</h1>
-        <h2>Instructions: Record a clip of audio and analyze it!</h2>
-        <h3>Controls</h3>
+        <h2>Instructions: Record/Upload a clip of audio and Viola!</h2>
+        <div id="frame">
+            <h3>Control Console</h3>
+        <button id="startRecord">Upload Recording</button>
         <button id="startRecord">Start Recording</button>
         <button id="stopRecord">Stop Recording</button>
         <button id="analyzeAudio">Analyze Current Audio</button>
         <button id="downloadAudio">Download Audio</button>
-
+        </div>
+        <div id="frame">
         <br>
         <h3>Current Audio:</h3>
         <audio id="recordedAudio" controls></audio>
         <br>
         <section>
-            <table>
+            <div class="results-container">
+            <table class="results-table">
                 <thead>
                     <tr>
-                        <th colspan="2">Results</th>
+                        <th colspan="2">Audio Profiling Results:</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -58,12 +64,12 @@
                         <td>Sadness %:</td>
                         <td></td>
                     </tr>
-
                 </tbody>
             </table>
+        </div>
             <span></span>
         </section>
-
+    </div>
         <script src="vocalTrace.js"></script>
     </body>
 </html>

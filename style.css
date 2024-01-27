@@ -1,0 +1,65 @@
+/* style.css */
+body {
+    background-color: #3D315B;
+    color: #E0E1DD; /* Off White */
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url('background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+h1 {
+    color: #009933; /* Matte Green */
+    text-align: center;
+}
+a {
+    color: #58A4B0; /* Matte Teal */
+    text-decoration: none;
+}
+a:hover {
+    color: #E0E1DD; /* Off White */
+}
+p {
+    font-size: 1em;
+    color: #666;
+}
+.button {
+    background-color: #58A4B0; /* Matte Teal */
+    color: #E0E1DD; /* Off White */
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #58A4B0; /* Matte Pink */
+}
+#frame {
+    border: 2px solid #ff99ff; /* Matte Pink */
+    padding: 20px;
+    margin: 20px;
+    border-radius: 15px;
+    background-color: #000066; /* Off White */
+    width: 80%;
+    max-width: 900px;
+}
+.results-table {
+    margin-top: 20px; /* Adjust as needed */
+    text-align: center;
+}
+.results-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
