@@ -18,6 +18,10 @@ h1 {
     color: #009933; /* Matte Green */
     text-align: center;
 }
+h2 {
+    color: #ffffff; /* Matte Green */
+    text-align: center;
+}
 a {
     color: #58A4B0; /* Matte Teal */
     text-decoration: none;
