@@ -59,7 +59,7 @@ button:hover {
 }
 #title_frame {
     border: 2px solid #E63462; /* Matte Pink */
-    padding: 3px; /* Reduced padding */
+    padding: 10px; /* Reduced padding */
     margin: 10px;
     border-radius: 15px;
     background-color: #E0E1DD; /* Off White */
