@@ -9,13 +9,17 @@ body {
     justify-content: center;
     height: 100vh;
     margin: 0;
-    background-image: url('background.jpg');
+    background-image: url('background.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 h1 {
-    color: #009933; /* Matte Green */
+    color: #341270; /* Matte Green */
+    text-align: center;
+}
+h2 {
+    color: #ffffff; /* Matte Green */
     text-align: center;
 }
 a {
@@ -52,6 +56,18 @@ button:hover {
     background-color: #000066; /* Off White */
     width: 80%;
     max-width: 900px;
+}
+#title_frame {
+    border: 2px solid #E63462; /* Matte Pink */
+    padding: 10px; /* Reduced padding */
+    margin: 30px;
+    border-radius: 15px;
+    background-color: #E0E1DD; /* Off White */
+    width: auto; /* Adjusted width */
+    max-width: none; /* Adjusted max-width */
+    margin: auto;
+    text-align: center;
+    display: inline-block; /* Added */
 }
 .results-table {
     margin-top: 20px; /* Adjust as needed */
