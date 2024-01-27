@@ -12,6 +12,15 @@ stopRecordButton.disabled = true;
 analyzeAudioButton.disabled = true;
 downloadAudioButton.disabled = true;
 
+function updateTableCell(tdId, newValue) {
+    const tdElement = document.getElementById(tdId);
+    if (tdElement) {
+        tdElement.textContent = newValue;
+    } else {
+        console.error(`Element with id ${tdId} not found`);
+    }
+}
+
 
 function analyzeUploadedFile() {
     const fileInput = document.getElementById('wavFile');
@@ -25,13 +34,22 @@ function analyzeUploadedFile() {
     const formData = new FormData();
     formData.append('audio', file);
 
-    fetch('https://api.example.com/upload-audio', {
+    fetch('http://71.197.246.219:8080/docs', {
         method: 'POST',
         body: formData,
     })
     .then(response => response.json())
     .then(data => {
         console.log('API response:', data);
+        updateTableCell('celebrity', )
+        updateTableCell('age', )
+        updateTableCell('gender', )
+        updateTableCell('anger', )
+        updateTableCell('disgust', )
+        updateTableCell('fear', )
+        updateTableCell('happy', )
+        updateTableCell('sad', )
+
     })
     .catch(error => console.error('API error:', error));
 }
@@ -48,13 +66,21 @@ function analyzeYouTubeLink() {
     const formData = new FormData();
     formData.append('youtubeLink', youtubeLink);
 
-    fetch('https://api.example.com/upload-youtube-link', {
+    fetch('http://71.197.246.219:8080/docs', {
         method: 'POST',
         body: formData,
     })
     .then(response => response.json())
     .then(data => {
         console.log('API response:', data);
+        updateTableCell('celebrity', )
+        updateTableCell('age', )
+        updateTableCell('gender', )
+        updateTableCell('anger', )
+        updateTableCell('disgust', )
+        updateTableCell('fear', )
+        updateTableCell('happy', )
+        updateTableCell('sad', )
     })
     .catch(error => console.error('API error:', error));
 }
@@ -114,6 +140,14 @@ analyzeAudioButton.addEventListener('click', () => {
     .then(response => response.json())
     .then(data => {
         console.log('API response:', data);
+        updateTableCell('celebrity', )
+        updateTableCell('age', )
+        updateTableCell('gender', )
+        updateTableCell('anger', )
+        updateTableCell('disgust', )
+        updateTableCell('fear', )
+        updateTableCell('happy', )
+        updateTableCell('sad', )
     })
     .catch(error => console.error('API error:', error));
 });
